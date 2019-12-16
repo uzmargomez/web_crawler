@@ -1,0 +1,7 @@
+flask==1.1.1
+spacy
+statistics
+pymongo
+pandas
+collections-extended
+matplotlib

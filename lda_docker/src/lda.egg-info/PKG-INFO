@@ -1,0 +1,21 @@
+Metadata-Version: 1.2
+Name: lda
+Version: 0.0.1
+Summary: This microservice gets the News Database from mongo and does the LDA algorithm
+Home-page: UNKNOWN
+Author: Ricardo Quintero & Roberto Rodríguez & Uzmar Gómez
+Author-email: ricardo.quintero@softtek.com & robertoc.rodriguez@softtek.com & uzmar.gomez@softtek.com
+License: MIT
+Description: # LDA
+        
+        This microservice gets the News Database from mongo and does the LDA algorithm
+        
+Platform: UNKNOWN
+Classifier: License :: OSI Approved :: MIT Licence
+Classifier: Development Status :: 3 - Alpha
+Classifier: Programming Language :: Python :: 3.6
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Intended Audience :: Developers
+Classifier: Natural Language :: English
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.7

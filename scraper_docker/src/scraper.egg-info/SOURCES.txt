@@ -1,0 +1,13 @@
+MANIFEST.in
+README.md
+setup.py
+src/scraper/__init__.py
+src/scraper.egg-info/PKG-INFO
+src/scraper.egg-info/SOURCES.txt
+src/scraper.egg-info/dependency_links.txt
+src/scraper.egg-info/entry_points.txt
+src/scraper.egg-info/not-zip-safe
+src/scraper.egg-info/requires.txt
+src/scraper.egg-info/top_level.txt
+src/scraper_docker/__init__.py
+src/scraper_functions/__init__.py

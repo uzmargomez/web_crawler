@@ -1,0 +1,3 @@
+[console_scripts]
+start-lda = lda_docker:lda_app
+

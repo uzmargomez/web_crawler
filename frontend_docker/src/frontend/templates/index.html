@@ -1,0 +1,98 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <!-- Required meta tags -->
+        <title>News Crawler</title>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <!-- Bootstrap CSS -->
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+    </head>
+
+    <body>
+    <!-- A grey horizontal navbar that becomes vertical on small screens -->
+        <nav class="navbar navbar-expand-md bg-dark navbar-dark sticky-top">
+
+            <!-- Brand -->
+            <a class="navbar-brand" href="/">Home</a>
+
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <!-- Links -->
+            <div class="collapse navbar-collapse" id="collapsibleNavbar">
+                <ul class="navbar-nav">
+                  <li class="nav-item">
+                    <a class="nav-link" href="/about">About</a>
+                  </li>
+                </ul>
+            </div>
+
+        </nav>
+
+        <div class="jumbotron text-center">
+            <h1>News Crawler</h1>
+        </div>
+
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-4">
+                    <h3>How it works</h3>
+                    <p>
+                    This site is meant to classify a news article acording with the appearing words on it. It uses the Latent Dirichlet
+                    Allocation algorithm, which is a topic modelling algorithm.
+                    </p>
+                    <br>
+
+<!-- This script will help us reload the mongo database -->
+                    <p>
+                    If you click the following button, the newspapers database will be updated
+                    </p>
+                    <button id="run_update">Update</button>
+
+                    <script>
+                    $("#run_update").click(function() {
+                      $.ajax({
+                        type: "GET",
+                        url: "http://localhost:5000/extract",
+                        success : function(result) {
+                          console.log(result);
+                        }
+                      });
+                    });
+                    </script>
+<!-- ********************************************************* -->
+
+                    <br>
+                </div>
+                <div class="col-sm-8">
+
+                  <form action = "http://localhost:5000/result" method = "POST" enctype="multipart/form-data">
+                    <fieldset>
+                      <input type="submit" class="btn btn-primary" name="submit"\>
+                    </fieldset>
+                  </form>
+                  <br>
+
+                </div>
+                <!-- <div class="col-sm-8">
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcS8ZGE_h0mq58_AWw5N6PDDzPCxlFDSCX64N4RGEx5Y6lmGfe_M"
+                    alt="W3Schools.com" width="350" height="233">
+                </div> -->
+            </div>
+        </div>
+
+        <!-- Optional JavaScript -->
+        <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+        <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+        <script src="http://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+
+    </body>
+</html>

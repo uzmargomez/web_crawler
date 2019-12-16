@@ -1,0 +1,13 @@
+MANIFEST.in
+README.md
+setup.py
+src/lda/__init__.py
+src/lda.egg-info/PKG-INFO
+src/lda.egg-info/SOURCES.txt
+src/lda.egg-info/dependency_links.txt
+src/lda.egg-info/entry_points.txt
+src/lda.egg-info/not-zip-safe
+src/lda.egg-info/requires.txt
+src/lda.egg-info/top_level.txt
+src/lda_docker/__init__.py
+src/lda_functions/__init__.py

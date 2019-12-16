@@ -1,0 +1,3 @@
+[console_scripts]
+start-frontend = frontend_docker:frontend_app
+

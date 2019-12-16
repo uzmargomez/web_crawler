@@ -1,0 +1,12 @@
+MANIFEST.in
+README.md
+setup.py
+src/frontend/__init__.py
+src/frontend.egg-info/PKG-INFO
+src/frontend.egg-info/SOURCES.txt
+src/frontend.egg-info/dependency_links.txt
+src/frontend.egg-info/entry_points.txt
+src/frontend.egg-info/not-zip-safe
+src/frontend.egg-info/requires.txt
+src/frontend.egg-info/top_level.txt
+src/frontend_docker/__init__.py
