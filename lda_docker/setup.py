@@ -29,7 +29,7 @@ setup(
     packages=find_packages(where='src'),
     package_dir={'': 'src'},
     install_requires=[
-        "flask==1.1.1",
+        "flask==2.3.2",
         "statistics",
         "pymongo",
         "pandas",
